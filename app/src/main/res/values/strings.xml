@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">AnalogClock</string>
+    <string name="smooth_seconds">Smooth Seconds</string>
+    <string name="show_digits">Show Digits</string>
+    <string name="show_second_dots">Show Second Dots</string>
+    <string name="clock_colors">Clock Colors:</string>
+</resources>
