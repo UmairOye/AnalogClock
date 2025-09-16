@@ -94,7 +94,7 @@ fun MainScreen() {
                 })
 
         ClockText(
-            text = stringResource(R.string.smooth_seconds),
+            text = stringResource(R.string.show_hours),
             modifier = Modifier
                 .padding(start = 15.dp)
                 .constrainAs(digitText) {
@@ -119,7 +119,7 @@ fun MainScreen() {
             })
 
         ClockText(
-            text = stringResource(R.string.smooth_seconds),
+            text = stringResource(R.string.show_seconds),
             modifier = Modifier
                 .padding(start = 15.dp)
                 .constrainAs(showSecondText) {
@@ -146,23 +146,26 @@ fun MainScreen() {
         ClockText(
             text = stringResource(R.string.clock_colors),
             modifier = Modifier
-                .padding(start = 15.dp).constrainAs(colorText) {
-                top.linkTo(showSecondToggle.bottom)
-                start.linkTo(parent.start)
-                end.linkTo(parent.end)
-                horizontalBias = 0f
-            }
+                .padding(start = 15.dp)
+                .constrainAs(colorText) {
+                    top.linkTo(showSecondToggle.bottom)
+                    start.linkTo(parent.start)
+                    end.linkTo(parent.end)
+                    horizontalBias = 0f
+                }
         )
 
         LazyRow(
             modifier = Modifier
-                .padding(start = 15.dp,
-                    end = 15.dp, top = 15.dp)
+                .padding(
+                    start = 15.dp,
+                    end = 15.dp, top = 15.dp
+                )
                 .constrainAs(colorList) {
-                top.linkTo(colorText.bottom)
-                end.linkTo(parent.end)
-                start.linkTo(parent.start)
-            }
+                    top.linkTo(colorText.bottom)
+                    end.linkTo(parent.end)
+                    start.linkTo(parent.start)
+                }
         ) {
             items(Utils.colorList()){
                 ColorItems(color = it, onClicked = {
