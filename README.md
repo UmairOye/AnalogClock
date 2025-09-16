@@ -1,2 +1,2 @@
-<img src="gif/app.gif" alt="Demo" width="400" height="700">
+<img src="gif/app.gif" alt="Demo" width="400" height="1080">
 
